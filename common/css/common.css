@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Bleeker;
+    src: url(/common/fonts/Bleeker\ Regular.ttf);
+}
+
+@font-face {
+    font-family: DomCasual;
+    src: url(/common/fonts/Dom\ Casual\ Regular.otf);
+}
+
+@font-face {
+    font-family: DomCasual;
+    src: url(/common/fonts/Dom\ Casual\ Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: DomCasual;
+    src: url(/common/fonts/Dom\ Casual\ Italic.ttf);
+    font-style: italic;
+}
+
+:root {
+    --font-dom-casual: "DomCasual", system-ui, sans-serif;
+    --font-bleeker: "Bleeker", cursive, sans-serif;
+
+    --primary-text-color: white;
+    --text-outline-color: lightblue;
+
+    --background-image: url(/common/images/background/main/WMW_UI_brick-HD.webp);
+}
+
+.bleeker {
+    font-family: var(--font-bleeker);
+}
+
+.dom-casual {
+    font-family: var(--font-dom-casual);
+}
+
+* {
+    font-family: var(--font-bleeker);
+}
+
+body {
+    background-image: var(--background-image);
+    background-size: contain;
+
+    color: var(--primary-text-color);
+    -webkit-text-stroke: 1px var(--text-outline-color);
+}
+
+
