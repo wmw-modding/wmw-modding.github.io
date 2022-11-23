@@ -27,6 +27,8 @@
     --primary-text-color: white;
     --text-outline-color: rgb(34 124 158);
 
+    --link-color: rgb(252 235 45);
+
     --background-image: url(/common/images/background/main/WMW_UI_brick-HD.webp);
 
     --button-image: url(/common/images/ui/wmw/button.png);
@@ -107,4 +109,22 @@ body {
 
 .button:where(:active) {
     transform: translateY(var(--button-text-translateY));
+}
+
+.no-outline {
+    -webkit-text-stroke: 0;
+}
+
+.link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.link:where(:hover, :focus) {
+    /* filter: brightness(50%); */
+    text-decoration: underline;
+}
+
+.link:active {
+    filter: brightness(50%);
 }
