@@ -24,8 +24,11 @@
     --font-dom-casual: "DomCasual", system-ui, sans-serif;
     --font-bleeker: "Bleeker", cursive, sans-serif;
 
+    --font-size: 1rem;
+
     --primary-text-color: white;
     --text-outline-color: rgb(34 124 158);
+    --text-outline-width: 0.05em;
 
     --link-color: rgb(252 235 45);
 
@@ -46,12 +49,11 @@
 
 * {
     font-family: var(--font-bleeker);
-}
+    font-size: var(--font-size);
 
-* {
     margin: 0;
     color: var(--primary-text-color);
-    -webkit-text-stroke: 0.05em var(--text-outline-color);
+    -webkit-text-stroke: 0;
 }
 
 body {
@@ -59,7 +61,9 @@ body {
     background-size: contain;
 }
 
-
+.outline {
+    -webkit-text-stroke: var(--text-outline-width) var(--text-outline-color);
+}
 
 .button {
     position: relative;
@@ -69,7 +73,7 @@ body {
     display: inline-grid;
     isolation: isolate;
     
-    font-size: 1em;
+    font-size: var(--font-size);
     padding: 1em 2em;
     text-align: center;
     text-decoration: none;
@@ -109,10 +113,6 @@ body {
 
 .button:where(:active) {
     transform: translateY(var(--button-text-translateY));
-}
-
-.no-outline {
-    -webkit-text-stroke: 0;
 }
 
 .link {
