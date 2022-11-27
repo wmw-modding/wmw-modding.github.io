@@ -28,6 +28,7 @@
 
     --primary-text-color: white;
     --text-outline-color: rgb(34 124 158);
+    --base-color: hsl(189, 49%, 37%);
     --text-outline-width: 0.05em;
 
     --link-color: rgb(252 235 45);
@@ -37,6 +38,9 @@
     --button-image: url(/common/images/ui/wmw/button.png);
     --button-image-pressed: url(/common/images/ui/wmw/button_highlight.png);
     --button-text-translateY: 4px;
+
+    --button-home-image: url(/common/images/ui/wmw/owall_button_main_menu.png);
+    --button-menu-image: url(/common/images/ui/wmw/owall_button_level.png);
 }
 
 .bleeker {
@@ -88,6 +92,8 @@ body {
 
     min-width: 5rem;
     min-height: 3rem;
+
+    -webkit-text-stroke: var(--text-outline-width) var(--text-outline-color);
 }
 
 .button::after {
@@ -98,7 +104,7 @@ body {
     position: absolute;
     z-index: -1;
 
-    border-image-slice: 27 27 27 27 fill;
+    border-image-slice: 30 30 32 30 fill;
     border-image-width: 20px 20px 20px 20px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: stretch stretch;
@@ -113,6 +119,63 @@ body {
 
 .button:where(:active) {
     transform: translateY(var(--button-text-translateY));
+}
+
+.button:is(
+    .home,
+    .menu,
+    .back,
+    .next,
+    .music,
+    .pause,
+    .play,
+    .sound,
+    .level,
+    .achivements,
+    .collectables
+) {
+    border-image: none;
+    background-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+.button.home {
+    background-image: var(--button-home-image);
+}
+.button.menu {
+    background-image: var(--button-menu-image);
+}
+.button:is(
+    .home,
+    .menu,
+    .back,
+    .next,
+    .music,
+    .pause,
+    .play,
+    .sound,
+    .level,
+    .achivements,
+    .collectables
+)::after {
+    content: none;
+}
+.button:is(
+    .home,
+    .menu,
+    .back,
+    .next,
+    .music,
+    .pause,
+    .play,
+    .sound,
+    .level,
+    .achivements,
+    .collectables
+):where(:active) {
+    transform: initial;
+    filter: brightness(50%);
 }
 
 .link {

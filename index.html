@@ -19,12 +19,18 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <script>
+            $(function () {
+                $("#primary-nav").load("/common/nav/nav.html");
+                // $("#footer").load("/footer.html");
+            });
+        </script>
         
         <script src="" async defer></script>
 
         <header id="primary-header"></header>
 
-        <nav id="primary-nav"></nav>
+        <nav id="primary-nav" class="primary-nav"></nav>
 
         <main id="content">
             <p class="bleeker bold">Published By:</p>

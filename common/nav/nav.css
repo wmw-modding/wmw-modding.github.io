@@ -1,0 +1,229 @@
+:root {
+    --nav-height: 3.5rem;
+    --nav-color: rgb(180 180 180);
+    --nav-border-color: var(--base-color);
+    --nav-border-radius: 10px;
+    --nav-border-width: 5px;
+    --nav-shadow-color: hsl(189, 49%, 29%);
+    --nav-shadow-transparacy: 180;
+    --nav-text-color: white;
+    --nav-font-size: 1.3rem;
+
+    --navbar-hover-color: var(--base-color);
+    --hamburger-color: white;
+    --nav-link-gap: 0rem;
+
+    --hamburger-transition-duration: 400ms;
+
+    --nav-transition-duration: 200ms;
+
+    scroll-margin: var(--navbar-height);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#primary-nav {
+    position: sticky;
+    top: 0;
+}
+
+/* navbar */
+
+.primary-nav {
+    margin: 0 1em;
+    padding: 0.1rem 0.5rem;
+    background-color: var(--nav-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    /* width: 100%; */
+
+    /* position: fixed; */
+    top: 0;
+
+    border-color: var(--nav-border-color);
+    border-style: solid;
+    border-radius: var(--nav-border-radius);
+    border-width: var(--nav-border-width);
+
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow:  0px 0px 0px var(--nav-border-width) var(--nav-shadow-color);
+    min-height: var(--nav-height);
+}
+
+.primary-nav .logo {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: var(--nav-font-size);
+
+    border-radius: var(--nav-border-radius);
+
+    padding: 0.3em 0.4em;
+    /* margin: .4em; */
+
+    gap: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    white-space: nowrap;
+
+    transition: background-color var(--nav-transition-duration);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--nav-link-gap);
+
+    padding: 0 0.5rem;
+}
+
+.nav-links li {
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem 0.1rem;
+
+    list-style: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nav-links li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    padding: 0.2rem 1.5rem;
+    cursor: pointer;
+
+    border-radius: var(--nav-border-radius);
+}
+
+.dropdown > .dropdown-menu > .dropdown > .dropdown-menu {
+    border: 2px solid var(--navbar-hover-color);
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+    display: flex;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color);
+
+    /* right: 0; */
+}
+
+.dropdown-menu {
+    display: none;
+
+    border-radius: var(--nav-border-radius);
+    padding: 0.5rem;
+
+    max-width: 50ch;
+}
+
+.dropdown-menu li a {
+    justify-content: flex-start
+}
+
+/* Hamburger */
+
+.hamburger-button {
+    display: none;
+}
+
+.hamburger-button {
+    background: transparent;
+    /* border: var(--hamburger-color) solid 2px; */
+    border: none;
+    border-radius: var(--nav-border-radius);
+    cursor: pointer;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .primary-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .links-container {
+        /* position: relative; */
+        /* overflow: hidden; */
+        grid-column: 1 / span 2;
+    }
+
+    .hamburger-button[aria-expanded="true"] + .nav-links {
+        /* max-height: auto; */
+        display: flex;
+    }
+
+    .nav-links {
+        width: 100%;
+        overflow-y: scroll;
+        display: none;
+        grid-column: 1 / span 2;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        max-height: min(50vh, 40rem);
+
+    }
+
+    .nav-links li {
+        padding: 0;
+    }
+
+    .nav-links li a {
+        padding: 1rem;
+    }
+
+    .dropdown-menu {
+        border: 2px var(--navbar-hover-color) solid;
+    }
+
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+        position: initial;
+        width: 100%;
+        margin: 0.5em auto;
+    }
+}
+
+@media (max-width: 300px) {
+    .logo span {
+        display: none;
+    }
+}
