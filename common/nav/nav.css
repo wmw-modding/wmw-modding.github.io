@@ -7,7 +7,7 @@
     --nav-shadow-color: hsl(189, 49%, 29%);
     --nav-shadow-transparacy: 180;
     --nav-text-color: white;
-    --nav-font-size: 1.3rem;
+    --nav-font-size: 1rem;
 
     --navbar-hover-color: var(--base-color);
     --hamburger-color: white;
@@ -26,7 +26,7 @@
     box-sizing: border-box;
 }
 
-#primary-nav {
+.primary-nav {
     position: sticky;
     top: 0;
 }
@@ -63,24 +63,25 @@
 }
 
 .primary-nav .logo {
-    text-decoration: none;
-    color: var(--nav-text-color);
-    font-size: var(--nav-font-size);
+    /* height: 50px; */
+    /* text-decoration: none; */
+    /* color: var(--nav-text-color); */
+    /* font-size: var(--nav-font-size); */
 
-    border-radius: var(--nav-border-radius);
+    /* border-radius: var(--nav-border-radius); */
 
-    padding: 0.3em 0.4em;
+    /* padding: 0.3em 0.4em; */
     /* margin: .4em; */
 
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
 
-    white-space: nowrap;
+    /* white-space: nowrap; */
 
     transition: background-color var(--nav-transition-duration);
 }
@@ -117,7 +118,7 @@
 
     text-decoration: none;
     font-size: var(--nav-font-size);
-    padding: 0.2rem 1.5rem;
+    /* padding: 0.2rem 1.5rem; */
     cursor: pointer;
 
     border-radius: var(--nav-border-radius);
@@ -170,12 +171,12 @@
 @media (max-width: 768px) {
     .primary-nav {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0fr 0fr;
         justify-items: center;
     }
 
     .hamburger-button {
-        display: block;
+        display: grid;
     }
 
     .links-container {

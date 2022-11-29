@@ -20,6 +20,11 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: "wmw-icons";
+    src: url(/common/fonts/wmw-icons/wmw-icons.ttf);
+}
+
 :root {
     --font-dom-casual: "DomCasual", system-ui, sans-serif;
     --font-bleeker: "Bleeker", cursive, sans-serif;
@@ -35,11 +40,12 @@
 
     --background-image: url(/common/images/background/main/WMW_UI_brick-HD.webp);
 
-    --button-image: url(/common/images/ui/wmw/button.png);
+    --button-image: url(/common/images/ui/wmw/button.svg);
+    --button-shadow-image: url(/common/images/ui/wmw/button_shadow.svg);
     --button-image-pressed: url(/common/images/ui/wmw/button_highlight.png);
     --button-text-translateY: 4px;
 
-    --button-home-image: url(/common/images/ui/wmw/owall_button_main_menu.png);
+    --button-home-image: url(/common/images/ui/wmw/home.svg);
     --button-menu-image: url(/common/images/ui/wmw/owall_button_level.png);
 }
 
@@ -60,6 +66,11 @@
     -webkit-text-stroke: 0;
 }
 
+*::before,
+*::after {
+    font-size: inherit;
+}
+
 body {
     background-image: var(--background-image);
     background-size: contain;
@@ -69,6 +80,8 @@ body {
     -webkit-text-stroke: var(--text-outline-width) var(--text-outline-color);
 }
 
+/* button */
+
 .button {
     position: relative;
     /* display: flex;
@@ -77,7 +90,7 @@ body {
     display: inline-grid;
     isolation: isolate;
     
-    font-size: var(--font-size);
+    /* font-size: var(--font-size); */
     padding: 1em 2em;
     text-align: center;
     text-decoration: none;
@@ -90,93 +103,100 @@ body {
     background: none;
     outline: none;
 
-    min-width: 5rem;
-    min-height: 3rem;
+    /* min-width: 2em; */
+    /* min-height: 3em; */
 
     -webkit-text-stroke: var(--text-outline-width) var(--text-outline-color);
 }
 
+.button::before,
 .button::after {
     content: "";
 
     width: 100%;
     height: 100%;
     position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.button::before {
     z-index: -1;
 
-    border-image-slice: 30 30 32 30 fill;
+    /* border-image-slice: 30 30 32 30 fill;
     border-image-width: 20px 20px 20px 20px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: stretch stretch;
-    border-image-source: var(--button-image);
+    border-image-source: var(--button-image); */
+
+    background-image: var(--button-image);
+}
+
+.button::after {
+    z-index: -2;
+    background-image: var(--button-shadow-image);
 }
 
 .button:where(:active)::after {
-    border-image-source: var(--button-image-pressed);
     transform: translateY(calc(-1 * var(--button-text-translateY)));
+}
+
+.button:where(:active)::before {
     filter: brightness(50%);
 }
 
-.button:where(:active) {
+.button:where(:active):not(.icon) {
     transform: translateY(var(--button-text-translateY));
 }
 
-.button:is(
-    .home,
-    .menu,
-    .back,
-    .next,
-    .music,
-    .pause,
-    .play,
-    .sound,
-    .level,
-    .achivements,
-    .collectables
-) {
-    border-image: none;
+/* button icon */
+
+.button.icon {
+    font-size: 1rem;
+    font-family: "wmw-icons";
+    aspect-ratio: 1 / 1;
+    /* border-image: none;
     background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center
+    background-position: center */
 }
-.button.home {
-    background-image: var(--button-home-image);
+
+.button.home::after {
+    /* background-image: var(--button-home-image); */
+    content: "H";
 }
-.button.menu {
-    background-image: var(--button-menu-image);
+.button.menu::after {
+    /* background-image: var(--button-menu-image); */
+    content: "M";
 }
-.button:is(
-    .home,
-    .menu,
-    .back,
-    .next,
-    .music,
-    .pause,
-    .play,
-    .sound,
-    .level,
-    .achivements,
-    .collectables
-)::after {
-    content: none;
+.button.icon::after {
+    /* display: inline-block; */
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.5;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    
+    font-size: 2.5em;
+
+    /* background-position: center;
+    background-size: contain; */
+
+    color: var(--text-color);
+    
+    z-index: -1;
+    background: none;
 }
-.button:is(
-    .home,
-    .menu,
-    .back,
-    .next,
-    .music,
-    .pause,
-    .play,
-    .sound,
-    .level,
-    .achivements,
-    .collectables
-):where(:active) {
+.button.icon:where(:active)::after {
     transform: initial;
     filter: brightness(50%);
 }
+
+/* link */
 
 .link {
     color: var(--link-color);

@@ -1,75 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg class="button" width="67.736mm" height="23.283mm" version="1.1" viewBox="0 0 67.736 23.283" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="50%" height="50%" class="button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <linearGradient id="b">
-   <stop style="stop-color:#13c5dc;stop-opacity:.61714" offset="0"/>
-   <stop style="stop-color:#c4fdfd" offset="1"/>
-  </linearGradient>
-  <linearGradient id="d">
-   <stop style="stop-color:#a1e6f4" offset="0"/>
-   <stop style="stop-color:#046b8e" offset="1"/>
-  </linearGradient>
-  <linearGradient id="c" x1="11.192" x2="11.192" y1="57.313" y2="74.073" gradientTransform="matrix(.97419 0 0 1 -1.2635 34.435)" gradientUnits="userSpaceOnUse" xlink:href="#d"/>
-  <filter id="k" x="-1.9824e-5" y="-6.1642e-5" width="1" height="1.0001" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
-  <filter id="i" x="-2.0349e-5" y="-6.7301e-5" width="1" height="1.0001" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
-  <filter id="h" x="-2.0635e-5" y="-7.0539e-5" width="1" height="1.0001" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
-  <filter id="g" x="-2.1899e-5" y="-8.787e-5" width="1" height="1.0002" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
-  <filter id="f" x="-2.1899e-5" y="-8.787e-5" width="1" height="1.0002" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
-  <filter id="e" x="-9.8745e-6" y="-3.9621e-5" width="1" height="1.0001" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00025227252"/>
-  </filter>
-  <linearGradient id="a" x1="11.582" x2="11.582" y1="79.087" y2="65.19" gradientUnits="userSpaceOnUse" xlink:href="#b"/>
-  <filter id="j" x="-1.9824e-5" y="-6.1642e-5" width="1" height="1.0001" style="color-interpolation-filters:sRGB">
-   <feGaussianBlur stdDeviation="0.00055947503"/>
-  </filter>
+    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="10%" stop-color="#a1e6f4ff"></stop>
+        <stop offset="90%" stop-color="#046b8eff"></stop>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#c4fdfdff"></stop>
+        <stop offset="100%" stop-color="#13c5dc9d"></stop>
+    </linearGradient>
  </defs>
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
  <g>
-  <path id="shadow" transform="matrix(1 0 0 .99987 -14.213 -94.934)" x="14.214478" y="96.443542" width="67.733002" height="21.783001" d="m20.035 96.444h56.091a5.8208 5.8208 45 0 1 5.8208 5.8208v10.141a5.8208 5.8208 135 0 1-5.8208 5.8208h-56.091a5.8208 5.8208 45 0 1-5.8208-5.8208v-10.141a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill-opacity:.54902;fill:#18142f;filter:url(#j);opacity:.998;paint-order:markers stroke fill"/>
-   <g id="button" transform="translate(-8.7643 -88.274)">
-    <path x="8.7656078" y="88.275139" width="67.733002" height="21.783001" d="m14.586 88.275h56.091a5.8208 5.8208 45 0 1 5.8208 5.8208v10.141a5.8208 5.8208 135 0 1-5.8208 5.8208h-56.091a5.8208 5.8208 45 0 1-5.8208-5.8208v-10.141a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill:#004768;filter:url(#k);paint-order:markers stroke fill"/>
-    <path x="9.6398516" y="89.190964" width="65.984512" height="19.951345" d="m15.196 89.191h54.872a5.5562 5.5562 45 0 1 5.5562 5.5562v8.8388a5.5562 5.5562 135 0 1-5.5562 5.5562h-54.872a5.5562 5.5562 45 0 1-5.5563-5.5562v-8.8388a5.5562 5.5562 135 0 1 5.5563-5.5562z" style="fill:url(#c);filter:url(#i);paint-order:markers stroke fill"/>
-    <path x="10.097107" y="89.64888" width="65.07" height="19.035517" d="m15.918 89.649h53.428a5.8208 5.8208 45 0 1 5.8208 5.8208v7.3938a5.8208 5.8208 135 0 1-5.8208 5.8208h-53.428a5.8208 5.8208 45 0 1-5.8208-5.8208v-7.3938a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill:#00b6cf;filter:url(#h);paint-order:markers stroke fill"/>
-    <path x="11.974555" y="91.526138" width="61.315105" height="15.281" d="m17.795 91.526h49.673a5.8208 5.8208 45 0 1 5.8208 5.8208v3.6393a5.8208 5.8208 135 0 1-5.8208 5.8208h-49.673a5.8208 5.8208 45 0 1-5.8208-5.8208v-3.6393a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill:#70f2fc;filter:url(#g);paint-order:markers stroke fill"/>
-    <path transform="matrix(.97447 0 0 .89755 1.4904 34.064)" x="11.562122" y="64.893082" width="61.315105" height="15.281" d="m17.383 64.893h49.673a5.8208 5.8208 45 0 1 5.8208 5.8208v3.6393a5.8208 5.8208 135 0 1-5.8208 5.8208h-49.673a5.8208 5.8208 45 0 1-5.8208-5.8208v-3.6393a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill:#129fbd;filter:url(#f);opacity:.997;paint-order:markers stroke fill"/>
-    <path transform="matrix(.94012 0 0 .57995 2.9404 55.516)" x="11.562122" y="64.893082" width="61.315105" height="15.281" d="m17.383 64.893h49.673a5.8208 5.8208 45 0 1 5.8208 5.8208v3.6393a5.8208 5.8208 135 0 1-5.8208 5.8208h-49.673a5.8208 5.8208 45 0 1-5.8208-5.8208v-3.6393a5.8208 5.8208 135 0 1 5.8208-5.8208z" style="fill:url(#a);filter:url(#e);opacity:.997;paint-order:markers stroke fill"/>
-   </g>
- </g>
- <style>
-    /* .pressed:hover #shadow {
-        opacity: 0 !important;
-    }
+  <g id="button">
+    <rect x="0" y="0" rx="0.5rem" style="width: 100%; height: calc(100% - 2px); fill: #004768; stroke-width: .27158"/>
+    <rect x="0.8" y="0.8" rx="0.5rem" style="width: calc(100% - (0.8px * 2)); height: calc(100% - 3.6px); fill: url(#Gradient1); stroke-width: 1.0264;"/>
+    <rect x="1.5" y="1.5" rx="0.5rem" style="width: calc(100% - 2.7px); height: calc(100% - 5px); fill: #00b6cf; stroke-width: 3.8794;"/>
+    <rect x="3.5" y="3.5" rx="0.5rem" style="width: calc(100% - 6.7px); height: calc(100% - 9px); fill: #70f2fc; stroke-width: 14.662;"/>
+    <rect x="4" y="4" rx="0.5rem" style="width: calc(100% - 7.7px); height: calc(100% - 10px); fill: #129fbd; stroke-width: 55.417;"/>
+    <rect x="5.5" y="5" rx="0.35rem" style="width: calc(100% - 11px); height: 35%; fill: url(#Gradient2); stroke-width: 209.45;"/>
+  </g>
+</g>
 
-    .button #shadow {
-        transition: opacity 200ms;
-    } */
-
-    .button #button {
-        --translateY: -88.274px;
-        transition: transform 100ms;
-        transform: translateY(var(--translateY)) translateX(-8.7643px) !important;
-    }
-
-    .button:hover #button {
-        transform: translateY(-87px) translateX(-8.7643px) !important;
-    }
-</style>
 </svg>
