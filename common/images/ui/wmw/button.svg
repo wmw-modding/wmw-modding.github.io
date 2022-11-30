@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="50%" height="50%" class="button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="80" height="30" class="button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
     <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
         <stop offset="10%" stop-color="#a1e6f4ff"></stop>
@@ -12,12 +12,12 @@
  </defs>
  <g>
   <g id="button">
-    <rect x="0" y="0" rx="0.5rem" style="width: 100%; height: calc(100% - 2px); fill: #004768; stroke-width: .27158"/>
-    <rect x="0.8" y="0.8" rx="0.5rem" style="width: calc(100% - (0.8px * 2)); height: calc(100% - 3.6px); fill: url(#Gradient1); stroke-width: 1.0264;"/>
-    <rect x="1.5" y="1.5" rx="0.5rem" style="width: calc(100% - 2.7px); height: calc(100% - 5px); fill: #00b6cf; stroke-width: 3.8794;"/>
-    <rect x="3.5" y="3.5" rx="0.5rem" style="width: calc(100% - 6.7px); height: calc(100% - 9px); fill: #70f2fc; stroke-width: 14.662;"/>
-    <rect x="4" y="4" rx="0.5rem" style="width: calc(100% - 7.7px); height: calc(100% - 10px); fill: #129fbd; stroke-width: 55.417;"/>
-    <rect x="5.5" y="5" rx="0.35rem" style="width: calc(100% - 11px); height: 35%; fill: url(#Gradient2); stroke-width: 209.45;"/>
+    <rect x="0" y="0" rx="5" width="80" height="28" style="fill: #004768; stroke-width: .27158"/>
+    <rect x="0.8" y="0.8" rx="5" width="78.4" height="26.4" style="fill: url(#Gradient1); stroke-width: 1.0264;"/>
+    <rect x="1.5" y="1.5" rx="5" width="77.3" height="25" style="fill: #00b6cf; stroke-width: 3.8794;"/>
+    <rect x="3.5" y="3.5" rx="5" width="73.3" height="21" style="fill: #70f2fc; stroke-width: 14.662;"/>
+    <rect x="4" y="4" rx="5" width="72.3" height="20" style="fill: #129fbd; stroke-width: 55.417;"/>
+    <rect x="5.5" y="5" rx="3.5" width="69" height="8" style="fill: url(#Gradient2); stroke-width: 209.45;"/>
   </g>
 </g>
 
